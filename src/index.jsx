@@ -7,7 +7,6 @@ require('file-loader?name=index.html!./index.html')
 class App extends React.Component {
   render () {
     return <div>
-        <h1>eSUBmanager</h1>
         <MainView />
     </div>;
   }
