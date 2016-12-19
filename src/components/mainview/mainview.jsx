@@ -1,16 +1,22 @@
 import React from 'react';
+import Header from '../header/header.jsx';
+import Footer from '../footer/footer.jsx';
+import Hierarchy from '../hierarchy/hierarchy.jsx';
+import Sequence from '../sequence/sequence.jsx';
+import Document from '../document/document.jsx';
+import Attribute from '../attribute/attribute.jsx';
 
 require('./mainview.css');
 
 export default class MainView extends React.Component {
     render() {
         return <div className="mainview-layout">
-            <div className="header-container"><h1>eSUBmanager</h1></div>
-            <div className="hierarchy-container">Hierarchy View</div>
-            <div className="sequence-container">Sequence View</div>
-            <div className="document-container">Document View</div>
-            <div className="attribute-container">Attribute View</div>
-            <div className="footer-container">Version 0.0.1</div>
+            <div className="header-container"><Header /></div>
+            <div className="hierarchy-container"><Hierarchy /></div>
+            <div className="sequence-container"><Sequence /></div>
+            <div className="document-container"><Document /></div>
+            <div className="attribute-container"><Attribute /></div>
+            <div className="footer-container"><Footer /></div>
         </div>
     }
 }
