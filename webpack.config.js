@@ -3,5 +3,11 @@ module.exports = {
     output: {
         path: './dist/',
         filename: 'bundle.js'
-    }
+    },
+    loaders: [
+        {
+            test: /\.jsx?/,
+            loader: 'babel'
+        }
+    ]
 }
