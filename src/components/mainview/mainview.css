@@ -1,6 +1,7 @@
 .mainview-layout {
     display: grid;
     grid-template-columns: 30% 70%;
+    grid-template-rows: 30vh 20vh 30vh 20vh;
 }
 
 .mainview-layout div {
@@ -9,24 +10,27 @@
 
 .hierarchy-container {
     grid-column: 1;
-    grid-row: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
     background-color: yellow;
 }
 
 .sequence-container {
     grid-column: 1;
-    grid-row-start: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
     background-color: lightgreen;
 }
 
 .document-container {
     grid-column: 2;
-    grid-row: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
     background-color: lightblue;
 }
 
 .attribute-container {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 4;
     background-color: lightpink;
 }
