@@ -15,5 +15,8 @@
   "license": "private",
   "dependencies": {
     "webpack": "^1.14.0"
+  },
+  "devDependencies": {
+    "file-loader": "^0.9.0"
   }
 }
