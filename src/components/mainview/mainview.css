@@ -1,3 +1,32 @@
 .mainview-layout {
-    background-color: red;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.mainview-layout div {
+    border: solid 1px black;
+}
+
+.hierarchy-container {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: yellow;
+}
+
+.sequence-container {
+    grid-column: 1;
+    grid-row-start: 2;
+    background-color: lightgreen;
+}
+
+.document-container {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: lightblue;
+}
+
+.attribute-container {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: lightpink;
 }
