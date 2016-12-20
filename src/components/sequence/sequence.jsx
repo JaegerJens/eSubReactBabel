@@ -7,7 +7,7 @@ export default class Sequence extends React.Component {
     render() {
         return <div>
                     <h2>Sequence View</h2>
-                    <Tree data={data} />
+                    <Tree data={data} select="1" />
                 </div>;
     }
 }

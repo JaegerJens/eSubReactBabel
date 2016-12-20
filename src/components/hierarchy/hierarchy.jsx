@@ -7,7 +7,7 @@ export default class Hierarchy extends React.Component {
     render() {
        return <div>
                 <h2>Hierarchy View</h2>
-                <Tree data={data}/>
+                <Tree data={data} select="3"/>
             </div>;
     }
 }
