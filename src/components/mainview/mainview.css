@@ -1,51 +1,60 @@
-.mainview-layout {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 5vh 25vh 20vh 25vh 20vh 5vh;
+.layout-grid-vertical {
+    display: flex;
+    flex-direction: column;
 }
 
-.mainview-layout > div {
-    padding: 5px;
+.layout-grid-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
     border: solid 1px black;
+    padding: 5px;
+}
+
+#mainview {
+    height: 100vh;
+}
+
+#content {
+    height: 90vh;
+}
+
+.leftside {
+    width: 40vw;
+}
+
+.rightside {
+    width: 60vw;
 }
 
 .header-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row: 1;
     background-color: #0074b2;
+    height: 5vh;
 }
 
 .hierarchy-container {
-    grid-column: 1;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    background-color: yellow;
+    background-color: lightblue;
+    height: 50vh;
 }
 
 .sequence-container {
-    grid-column: 1;
-    grid-row-start: 4;
-    grid-row-end: 6;
-    background-color: lightgreen;
+    background-color: yellow;
+    height: 50vh;
 }
 
 .document-container {
-    grid-column: 2;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    background-color: lightblue;
+    background-color: lightcoral;
+    height: 70vh;
 }
 
 .attribute-container {
-    grid-column: 2;
-    grid-row: 5;
-    background-color: lightpink;
+    background-color: lightgreen;
+    height: 30vh;
 }
 
 .footer-container {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row: 6;
     background-color: #0074b2;
+    height: 5vh;
 }
