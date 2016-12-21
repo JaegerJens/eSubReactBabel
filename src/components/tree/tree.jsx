@@ -4,9 +4,9 @@ require('./tree.css');
 
 const ListItem = props => {
     if (props.isSelected) {
-        return <li className="selected">{props.value}</li>;
+        return <li className="selected" onClick={props.onClick}>{props.value}</li>;
     } else {
-        return <li>{props.value}</li>;
+        return <li onClick={props.onClick}>{props.value}</li>;
     }
 };
 
@@ -19,7 +19,8 @@ export default class Tree extends React.Component {
             }
             return (key === selectedItem);
         }
-        const listData = this.props.data.map((entry, index) => <ListItem key={index} value={entry} isSelected={isSelected(index)}/>);
+        console.log('hierarchy component render', this.props);
+        const listData = this.props.data.map((entry, index) => <ListItem key={index} value={entry} isSelected={isSelected(index)} onClick={this.props.onClick}/>);
         return <ul>{listData}</ul>;
     }
 }
