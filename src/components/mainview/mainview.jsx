@@ -8,21 +8,56 @@ import Attribute from '../attribute/attribute.jsx';
 
 require('./mainview.css');
 
+const layout = {
+    leftside: 40,
+    rightside: 60,
+    modules: {
+        header: {height: 5},
+        hierarchy: {height: 50},
+        sequence: {height: 50},
+        document: {height: 70},
+        attribute: {height: 30},
+        footer: {height: 5}
+    }
+};
+
+const colors = {
+    header: "#0074b2",
+    footer: "#0074b2",
+    hierarchy: "lightblue",
+    sequence: "yellow",
+    document: "lightcoral",
+    attribute: "lightgreen"
+};
+
+const Width = w => { return { width: w + "vw" }};
+const Height = (style, h) => Object.assign({}, style, { height: h + "vh" });
+const Background = c => {return {backgroundColor: c}};
+
 export default class MainView extends React.Component {
     render() {
+        const headerStyle = Height(Background(colors.header), layout.modules.header.height);
+        const footerStyle = Height(Background(colors.footer), layout.modules.footer.height);
+        const hierarchyStyle = Height(Background(colors.hierarchy), layout.modules.hierarchy.height);
+        const sequenceStyle = Height(Background(colors.sequence), layout.modules.sequence.height);
+        const documentStyle = Height(Background(colors.document), layout.modules.document.height);
+        const attributeStyle = Height(Background(colors.attribute), layout.modules.attribute.height);
+        const leftSideStyle = Width(layout.leftside);
+        const rightSideStyle = Width(layout.rightside);
+
         return <div id="mainview" className="layout-grid-vertical">
-                    <div className="container header-container"><Header /></div>
-                    <div id="content" className="layout-grid-horizontal">
-                        <div className="layout-grid-vertical leftside">
-                            <div className="container hierarchy-container"><Hierarchy /></div>
-                            <div className="container sequence-container"><Sequence /></div>
+                    <div className="container" style={headerStyle}><Header /></div>
+                    <div className="layout-grid-horizontal">
+                        <div className="layout-grid-vertical" style={leftSideStyle}>
+                            <div className="container" style={hierarchyStyle}><Hierarchy /></div>
+                            <div className="container" style={sequenceStyle}><Sequence /></div>
                         </div>
-                        <div className="layout-grid-vertical rightside">
-                            <div className="container document-container"><Document /></div>
-                            <div className="container attribute-container"><Attribute /></div>
+                        <div className="layout-grid-vertical" style={rightSideStyle}>
+                            <div className="container" style={documentStyle}><Document /></div>
+                            <div className="container" style={attributeStyle}><Attribute /></div>
                         </div>
                     </div>
-                    <div className="container footer-container"><Footer /></div>
+                    <div className="container" style={footerStyle}><Footer /></div>
                 </div>
     }
 }
