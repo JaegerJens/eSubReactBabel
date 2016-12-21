@@ -8,7 +8,7 @@ const mapStateToProps = (state) => state.hierarchy;
 // inject dispatch actions as props
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSelect: (id) => dispatch(selectHierarchy(id))
+        onSelect: (id, name) => dispatch(selectHierarchy(id, name))
     };
 }
 

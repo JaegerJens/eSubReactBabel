@@ -1,7 +1,9 @@
-export const selectHierarchy = (id) => {
-    console.log('select hierarchy id:', id)
-    return {
+export const selectHierarchy = (id, name) => {
+    var action = {
         type: 'HIERARCHY_SELECT',
-        id
+        id,
+        name
     };
+    console.log("select hierarchy action: ", action);
+    return action;
 };
