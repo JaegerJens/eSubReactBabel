@@ -7,10 +7,9 @@ function reduce(state = initial, action) {
     console.log('reduce hierarchy', state, action);
     switch (action.type) {
         case 'HIERARCHY_SELECT':
-            var new_state = {
-                data: ['dossier 1', 'dossier 2', 'dossier 3'],
+            var new_state = Object.assign({}, state, {
                 selected: action.id
-            };
+            });
             console.log('new hierarchy state:', new_state);
             return new_state;
         default:
