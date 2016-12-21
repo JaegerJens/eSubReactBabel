@@ -1,6 +1,7 @@
-const selectHierarchy = (id) => ({
-    type: 'HIERARCHY_SELECT',
-    id
-});
-
-export default selectHierarchy;
+export const selectHierarchy = (id) => {
+    console.log('select hierarchy id:', id)
+    return {
+        type: 'HIERARCHY_SELECT',
+        id
+    };
+};

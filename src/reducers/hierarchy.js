@@ -1,11 +1,21 @@
 let initial = {
-    data: ['dossier 1', 'dossier 2'],
+    data: ['dossier 1', 'dossier 2', 'dossier 3', 'dossier 4'],
     selected: 1
 }
 
-function reduce(state, action) {
+function reduce(state = initial, action) {
     console.log('reduce hierarchy', state, action);
-    return initial;
+    switch (action.type) {
+        case 'HIERARCHY_SELECT':
+            var new_state = {
+                data: ['dossier 1', 'dossier 2', 'dossier 3'],
+                selected: action.id
+            };
+            console.log('new hierarchy state:', new_state);
+            return new_state;
+        default:
+            return state;
+    }
 }
 
 export default reduce;
