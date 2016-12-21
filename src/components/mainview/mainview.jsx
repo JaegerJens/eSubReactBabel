@@ -30,18 +30,19 @@ const colors = {
     attribute: "lightgreen"
 };
 
+const combine = (a, b) => Object.assign({}, a, b);
 const Width = w => { return { width: w + "vw" }};
-const Height = (style, h) => Object.assign({}, style, { height: h + "vh" });
+const Height = h => { return { height: h + "vh" }};
 const Background = c => {return {backgroundColor: c}};
 
 export default class MainView extends React.Component {
     render() {
-        const headerStyle = Height(Background(colors.header), layout.modules.header.height);
-        const footerStyle = Height(Background(colors.footer), layout.modules.footer.height);
-        const hierarchyStyle = Height(Background(colors.hierarchy), layout.modules.hierarchy.height);
-        const sequenceStyle = Height(Background(colors.sequence), layout.modules.sequence.height);
-        const documentStyle = Height(Background(colors.document), layout.modules.document.height);
-        const attributeStyle = Height(Background(colors.attribute), layout.modules.attribute.height);
+        const headerStyle = combine(Background(colors.header), Height(layout.modules.header.height));
+        const footerStyle = combine(Background(colors.footer), Height(layout.modules.footer.height));
+        const hierarchyStyle = combine(Background(colors.hierarchy), Height(layout.modules.hierarchy.height));
+        const sequenceStyle = combine(Background(colors.sequence), Height(layout.modules.sequence.height));
+        const documentStyle = combine(Background(colors.document), Height(layout.modules.document.height));
+        const attributeStyle = combine(Background(colors.attribute), Height(layout.modules.attribute.height));
         const leftSideStyle = Width(layout.leftside);
         const rightSideStyle = Width(layout.rightside);
 
