@@ -8,9 +8,7 @@ function reduce(state = initial, action) {
     console.log('reduce sequence', state, action);
     switch(action.type) {
         case 'HIERARCHY_SELECT':
-            var new_state = Object.assign({}, state, {
-                dossier: action.name
-            });
+            var new_state = { ...state, dossier: action.name };
             console.log('new sequence state: ', new_state);
             return new_state;
         default:
