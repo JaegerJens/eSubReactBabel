@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import reducer from './reducers/index.js';
-import MainView from './components/mainview/mainview.jsx';
+import MainView from './components/mainview/container.js';
 
 require('file-loader?name=index.html!./index.html')
 require('./style.css')

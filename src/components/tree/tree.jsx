@@ -2,22 +2,22 @@ import React from 'react';
 
 require('./tree.css');
 
-const ListItem = props => {
-    const onClickHandler = e => props.onClick(props.number, props.value);
-    if (props.isSelected) {
-        return <li className="selected" onClick={onClickHandler}>{props.value}</li>;
+const ListItem = ({number, value, onClick, isSelected}) => {
+    const onClickHandler = () => onClick(number, value);
+    if (isSelected) {
+        return <li className="selected" onClick={onClickHandler}>{value}</li>;
     } else {
-        return <li onClick={onClickHandler}>{props.value}</li>;
+        return <li onClick={onClickHandler}>{value}</li>;
     }
 };
 
-export default class Tree extends React.Component {
-    render() {
-        const isSelected = key => (key === this.props.select);
-        const listData = this.props.data.map(
+const Tree = ({select, data, onClick}) => {
+    const isSelected = key => (key === select);
+    const listData = data.map(
             (entry, index) =>
-                <ListItem key={index} number={index} value={entry} isSelected={isSelected(index)} onClick={this.props.onClick}/>
-        );
-        return <ul>{listData}</ul>;
-    }
-}
+                <ListItem key={index} number={index} value={entry} isSelected={isSelected(index)} onClick={onClick}/>
+    );
+    return <ul>{listData}</ul>;
+};
+
+export default Tree;

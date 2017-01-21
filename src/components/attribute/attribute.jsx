@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default class Attribute extends React.Component {
-    render() {
-        return <h2>Attribute View</h2>
-    }
-}
+const Attribute = () => (
+    <h2>Attribute View</h2>
+);
+export default Attribute;
