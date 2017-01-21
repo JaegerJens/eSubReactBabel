@@ -1,4 +1,4 @@
-import Component from '../components/sequence/sequence.jsx';
+import Component from './component.jsx';
 import {connect} from 'react-redux';
 
 // maps store to props

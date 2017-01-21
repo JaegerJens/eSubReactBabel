@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../header/header.jsx';
 import Footer from '../footer/footer.jsx';
 import Hierarchy from '../hierarchy/container.js'
-import Sequence  from '../../containers/sequence.js';
+import Sequence  from '../sequence/container.js';
 import Document from '../document/document.jsx';
 import Attribute from '../attribute/attribute.jsx';
 
