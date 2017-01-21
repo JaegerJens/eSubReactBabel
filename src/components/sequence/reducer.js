@@ -14,7 +14,6 @@ function reduce(state = initial, action) {
         default:
             return state;
     }
-    return initial;
 }
 
 export default reduce;
