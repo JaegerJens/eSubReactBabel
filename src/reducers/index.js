@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import hierarchy from './hierarchy.js';
+import hierarchy from '../components/hierarchy/reducer.js';
 import sequence from './sequence.js';
 
 const rootReducer = combineReducers({

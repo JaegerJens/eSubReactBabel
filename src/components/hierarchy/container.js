@@ -1,5 +1,5 @@
-import {selectHierarchy} from '../actions/hierarchy.js';
-import Component from '../components/hierarchy/hierarchy.jsx';
+import {selectHierarchy} from './action.js';
+import Component from './component.jsx';
 import {connect} from 'react-redux';
 
 // maps store to props
