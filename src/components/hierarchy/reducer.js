@@ -4,11 +4,9 @@ let initial = {
 }
 
 function reduce(state = initial, action) {
-    console.log('reduce hierarchy', state, action);
     switch (action.type) {
         case 'HIERARCHY_SELECT':
             var new_state = { ... state, selected: action.id };
-            console.log('new hierarchy state:', new_state);
             return new_state;
         default:
             return state;

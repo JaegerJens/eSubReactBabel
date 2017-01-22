@@ -4,6 +4,5 @@ export const selectHierarchy = (id, name) => {
         id,
         name
     };
-    console.log("select hierarchy action: ", action);
     return action;
 };
