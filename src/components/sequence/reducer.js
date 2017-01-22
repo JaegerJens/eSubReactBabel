@@ -11,6 +11,10 @@ function reduce(state = initial, action) {
             var new_state = { ...state, dossier: action.name };
             console.log('new sequence state: ', new_state);
             return new_state;
+        case 'SEQUENCE_SELECT':
+            var new_state = { ...state, selected: action.id};
+            console.log('new sequence state: ', new_state);
+            return new_state;
         default:
             return state;
     }
