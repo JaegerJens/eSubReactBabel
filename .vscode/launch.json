@@ -10,6 +10,20 @@
             "webRoot": "${workspaceRoot}"
         },
         {
+            "name": "Launch Chrome Canary against localhost, with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8080",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "runtimeExecutable": "${env.USERPROFILE}/AppData/Local/Google/Chrome SxS/Application/chrome.exe",
+            "runtimeArgs": [
+                "--new-window",
+                "--remote-debugging-port=9223"
+            ],
+            "port": 9223
+        },
+        {
             "name": "Attach to Chrome, with sourcemaps",
             "type": "chrome",
             "request": "attach",
