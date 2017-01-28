@@ -1,0 +1,17 @@
+exports[`Hierarchy component matches snapshot 1`] = `
+<div>
+  <h2>
+    Hierarchy View
+  </h2>
+  <Tree
+    data={
+      Array [
+        "a",
+        "b",
+        "c",
+      ]
+    }
+    onClick="onSelect function"
+    select={2} />
+</div>
+`;
