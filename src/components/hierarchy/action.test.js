@@ -1,15 +1,16 @@
 import {selectHierarchy} from './action.js'
-import test from 'ava';
 
-test('should return type HIERARCHY_SELECT', assert => {
-    const actual = selectHierarchy(1, 'test');
-    assert.is('HIERARCHY_SELECT', actual.type);
+describe('hierarchy action', () => {
+    it('should return type HIERARCHY_SELECT', () => {
+        expect(selectHierarchy(1, 'test').type)
+        .toEqual('HIERARCHY_SELECT');
+    });
+    it('should return same id', () => {
+        expect(selectHierarchy(5, 'test').id)
+        .toEqual(5);
+    });
+    it('should return same name', () => {
+        expect(selectHierarchy(7, 'some name').name)
+        .toEqual('some name');
+    });
 });
-test('should return same id', assert => {
-    const actual = selectHierarchy(5, 'test');
-    assert.is(5, actual.id);
-})
-test('should return same name', assert => {
-    const actual = selectHierarchy(7, 'some name');
-    assert.is("some name", actual.name)
-})
