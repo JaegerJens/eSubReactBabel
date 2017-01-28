@@ -1,0 +1,19 @@
+exports[`Tree component matches snapshot 1`] = `
+<ul>
+  <ListItem
+    isSelected={false}
+    number={0}
+    onClick="onClick function"
+    value="a" />
+  <ListItem
+    isSelected={false}
+    number={1}
+    onClick="onClick function"
+    value="b" />
+  <ListItem
+    isSelected={true}
+    number={2}
+    onClick="onClick function"
+    value="c" />
+</ul>
+`;
