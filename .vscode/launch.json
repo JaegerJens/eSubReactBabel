@@ -32,15 +32,19 @@
             "webRoot": "${workspaceRoot}"
         },
         {
-            "name": "Debug AVA",
+            "name": "Debug npm tests",
             "type": "node",
             "request":"launch",
-            "program": "${workspaceRoot}/node_modules/ava/profile.js",
-            "args": [
-                "${file}"
-            ],
+            "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+            "stopOnEntry": false,
+            "args": ["--runInBand"],
+            "runtimeArgs": ["--nolazy"],
             "cwd": "${workspaceRoot}",
-            "stopOnEntry": true
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "env": {
+                "NODE_ENV": "development"
+            }
         }
     ]
 }
