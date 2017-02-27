@@ -1,14 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ListItem component matches selected snapshot 1`] = `
 <li
   className="selected"
-  onClick={[Function]}>
+  onClick={[Function]}
+>
   id5424
 </li>
 `;
 
 exports[`ListItem component matches unselected snapshot 1`] = `
 <li
-  onClick={[Function]}>
+  onClick={[Function]}
+>
   id3424
 </li>
 `;
@@ -19,16 +23,19 @@ exports[`Tree component matches snapshot 1`] = `
     isSelected={false}
     number={0}
     onClick="onClick function"
-    value="a" />
+    value="a"
+  />
   <ListItem
     isSelected={false}
     number={1}
     onClick="onClick function"
-    value="b" />
+    value="b"
+  />
   <ListItem
     isSelected={true}
     number={2}
     onClick="onClick function"
-    value="c" />
+    value="c"
+  />
 </ul>
 `;
