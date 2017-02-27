@@ -1,21 +1,22 @@
 import React from 'react';
 import {render} from 'react-dom';
+import configureStore from './configureStore.js';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-import reducer from './reducers/index.js';
 import MainView from './components/mainview/container.js';
+import DevTools from './components/devtool/component.jsx';
 
 require('file-loader?name=index.html!./index.html')
 require('./style.css')
 
-const store = createStore(reducer);
+const store = configureStore();
 
-class App extends React.Component {
-  render () {
-    return <Provider store={store}>
-              <MainView />
-           </Provider>;
-  }
-}
+const App = () => (
+  <Provider store={store}>
+    <div>
+      <MainView />
+      <DevTools />
+    </div>
+  </Provider>
+);
 
 render(<App/>, document.getElementById('app'));
