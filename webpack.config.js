@@ -12,7 +12,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './src/index.html'
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'react',
             minChunks: (module) => {
