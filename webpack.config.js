@@ -1,11 +1,25 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.jsx',
+    entry: {
+        main: './src/index.jsx',
+        react: 'react'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[chunkhash].[name].js',
         path: path.resolve(__dirname, 'dist')
     },
+    plugins: [
+        new HtmlWebpackPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'react',
+            minChunks: (module) => {
+                return module.context && module.context.indexOf('node_modules') !== -1;
+            }
+        })
+    ],
     resolve: {
         extensions: ['.js', '.jsx']
     },
