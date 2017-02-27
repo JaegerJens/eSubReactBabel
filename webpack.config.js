@@ -21,6 +21,12 @@ module.exports = {
             minChunks: (module) => {
                 return module.context && module.context.indexOf('node_modules') !== -1;
             }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
+            compress: {
+                warnings: false
+            }
         })
     ],
     resolve: {
