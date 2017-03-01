@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "dev": "webpack-dev-server -d",
-    "build": "webpack --progress",
+    "build": "webpack --progress --optimize-minimize",
     "lint": "eslint src"
   },
   "keywords": [
