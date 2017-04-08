@@ -1,5 +1,5 @@
-import Component from './component.jsx';
-import {connect} from 'react-redux';
+import Component from "./component.jsx";
+import {connect} from "react-redux";
 
 const mapStateToProps = (state) => state.mainview;
 

@@ -20,8 +20,9 @@
     "rules": {
         "linebreak-style": "off",
         "one-var": "off",
-        "no-extra-parens": "off",
-        "react/prop-types": "off"
+        "no-extra-parens": ["error", "all", {"ignoreJSX": "multi-line"}],
+        "react/prop-types": "off",
+        "react/jsx-max-props-per-line": ["error", {"maximum": 4}]
     },
     "settings": {
         "ignoreJSX": "multi-line"
