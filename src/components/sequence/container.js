@@ -1,15 +1,12 @@
-import {selectSequence} from './action.js'
-import Component from './component.jsx';
-import {connect} from 'react-redux';
+import Component from "./component.jsx";
+import {connect} from "react-redux";
+import {selectSequence} from "./action.js";
 
-// maps store to props
+// Maps store to props
 const mapStateToProps = (state) => state.sequence;
 
-// inject dispatch actions as props
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onSelect: (id, name) => dispatch(selectSequence(id, name))
-    }
-}
+// Inject dispatch actions as props
+const mapDispatchToProps = (dispatch) =>
+    ({"onSelect": (id, name) => dispatch(selectSequence(id, name))});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Component);

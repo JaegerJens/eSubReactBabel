@@ -1,5 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Footer = () => (<p>Version 0.0.1</p>);
+const version = "0.0.2";
+
+const versionText = `Version ${version}`;
+
+const Footer = () => (<p>{versionText}</p>);
 
 export default Footer;

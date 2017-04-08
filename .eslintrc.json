@@ -18,6 +18,12 @@
     ],
     "extends": ["eslint:all", "plugin:react/all"],
     "rules": {
-        "linebreak-style": "off"
+        "linebreak-style": "off",
+        "one-var": "off",
+        "no-extra-parens": "off",
+        "react/prop-types": "off"
+    },
+    "settings": {
+        "ignoreJSX": "multi-line"
     }
 }
