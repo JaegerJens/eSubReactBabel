@@ -1,22 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListItem component matches selected snapshot 1`] = `
-<li
-  className="selected"
-  onClick={[Function]}
->
-  id5424
-</li>
-`;
-
-exports[`ListItem component matches unselected snapshot 1`] = `
-<li
-  onClick={[Function]}
->
-  id3424
-</li>
-`;
-
 exports[`Tree component matches snapshot 1`] = `
 <ul>
   <ListItem
