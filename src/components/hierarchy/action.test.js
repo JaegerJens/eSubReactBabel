@@ -1,16 +1,32 @@
-import {selectHierarchy} from './action.js'
+import {selectHierarchy} from "./action.js";
 
-describe('hierarchy action', () => {
-    it('should return type HIERARCHY_SELECT', () => {
-        expect(selectHierarchy(1, 'test').type)
-        .toEqual('HIERARCHY_SELECT');
+describe("hierarchy action", () => {
+
+    it("should return type HIERARCHY_SELECT", () => {
+
+        const first = 1;
+
+        expect(selectHierarchy(first, "test").type).
+            toEqual("HIERARCHY_SELECT");
+
     });
-    it('should return same id', () => {
-        expect(selectHierarchy(5, 'test').id)
-        .toEqual(5);
+
+    it("should return same id", () => {
+
+        const input = 5;
+
+        expect(selectHierarchy(input, "test").id).
+            toEqual(input);
+
     });
-    it('should return same name', () => {
-        expect(selectHierarchy(7, 'some name').name)
-        .toEqual('some name');
+
+    it("should return same name", () => {
+
+        const index = 7;
+
+        expect(selectHierarchy(index, "some name").name).
+            toEqual("some name");
+
     });
+
 });

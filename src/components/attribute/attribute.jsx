@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Attribute = () => (
-    <h2>Attribute View</h2>
-);
+const attributeTitle = "Attribute View";
+
+const Attribute = () => <h2>{attributeTitle}</h2>;
+
 export default Attribute;

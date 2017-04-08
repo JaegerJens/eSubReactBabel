@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-require('./header.css');
+require("./header.css");
 
-const Header = () => (
-    <h1>eSUBmanager</h1>
-);
+const appTitle = "eSUBmanager";
+
+const Header = () => <h1>{appTitle}</h1>;
 
 export default Header;

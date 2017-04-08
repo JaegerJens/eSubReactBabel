@@ -1,14 +1,19 @@
-import React from 'React';
-import Hierarchy from './component.jsx';
-import renderer from 'react-test-renderer';
+import React from "React";
+import hierarchy from "./component.jsx";
+import renderer from "react-test-renderer";
 
-describe('Hierarchy component', () => {
-    it('matches snapshot', () => {
+describe("Hierarchy component", () => {
+
+    it("matches snapshot", () => {
+
         const prop = {
-            data: ['a', 'b', 'c'],
-            selected: 2,
-            onSelect: "onSelect function"
+            "data": ["a", "b", "c"],
+            "onSelect": "onSelect function",
+            "selected": 2
         };
-        expect(Hierarchy(prop)).toMatchSnapshot();
+
+        expect(hierarchy(prop)).toMatchSnapshot();
+
     });
+
 });
