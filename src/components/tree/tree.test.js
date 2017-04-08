@@ -1,6 +1,6 @@
-import tree, {listItem} from "./tree.jsx";
 import React from "React";
 import renderer from "react-test-renderer";
+import tree from "./tree.jsx";
 
 describe("Tree component", () => {
 
