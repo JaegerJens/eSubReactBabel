@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from "React";
 import listItem from "./listItem.jsx";
 import renderer from "react-test-renderer";
+/* eslint-enable no-unused-vars */
 
 const emptyClickHandler = () => true;
 

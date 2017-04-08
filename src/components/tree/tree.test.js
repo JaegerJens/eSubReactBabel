@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from "React";
 import renderer from "react-test-renderer";
 import tree from "./tree.jsx";
+/* eslint-enable no-unused-vars */
 
 describe("Tree component", () => {
 

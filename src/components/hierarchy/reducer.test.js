@@ -1,12 +1,16 @@
 import reduce from "./reducer.js";
 
+/* eslint-disable no-undefined */
+const unknown = undefined;
+/* eslint-enable no-undefined */
+
 describe("hierarchy reducer", () => {
 
     it("initial state has 4 dossiers", () => {
 
         const expected = 4;
 
-        expect(reduce(undefined, {}).data.length).
+        expect(reduce(unknown, {}).data.length).
             toEqual(expected);
 
     });
@@ -15,7 +19,7 @@ describe("hierarchy reducer", () => {
 
         const expected = 1;
 
-        expect(reduce(undefined, {}).selected).
+        expect(reduce(unknown, {}).selected).
             toEqual(expected);
 
     });

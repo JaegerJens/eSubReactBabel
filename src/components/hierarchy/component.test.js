@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from "React";
 import hierarchy from "./component.jsx";
 import renderer from "react-test-renderer";
+/* eslint-enable no-unused-vars */
 
 describe("Hierarchy component", () => {
 
