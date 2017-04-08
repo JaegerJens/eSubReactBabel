@@ -11,7 +11,7 @@ describe("ListItem component", () => {
         const props = {
             "isSelected": true,
             "number": 3,
-            "onClick": () => console.log("click"),
+            "onClick": emptyClickHandler,
             "value": "id5424"
         };
 

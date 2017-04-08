@@ -27,7 +27,6 @@
         "linebreak-style": 0,
         "one-var": 0,
         "no-unused-vars": 1,
-        "no-console": 1,
         "no-undefined": 1,
         "no-extra-parens": ["error", "all", {"ignoreJSX": "multi-line"}],
         "react/prop-types": "off",
